@@ -8,10 +8,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
       - name: Install Java
-        run: sudo apt update && sudo apt install openjdk-21-jre-headless -y
+        run: |
+          sudo apt update
+          sudo apt install openjdk-21-jre-headless -y
 
       - name: Download Playit
         run: |
@@ -19,7 +22,9 @@ jobs:
           chmod +x playit-linux-amd64
 
       - name: Run Playit
-        run: ./playit-linux-amd64 &
+        run: |
+          ./playit-linux-amd64 &
 
       - name: Start Minecraft Server
-        run: java -Xmx4G -Xms2G -jar paper-1.21.11-126.jar nogui
+        run: |
+          java -Xmx4G -Xms2G -jar paper-1.21.11-126.jar nogui
