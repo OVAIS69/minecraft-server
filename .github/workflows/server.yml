@@ -1,4 +1,4 @@
-name: Minecraft Server
+name: Minecraft Server 1.21.11
 
 on:
   workflow_dispatch:
