@@ -11,10 +11,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Install Java
-        run: |
-          sudo apt update
-          sudo apt install openjdk-21-jre-headless -y
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
 
       - name: Download Playit
         run: |
