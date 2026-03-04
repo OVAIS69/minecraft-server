@@ -29,4 +29,4 @@ jobs:
         run: ./playit-linux-amd64 &
 
       - name: Start Minecraft Server
-        run: java -Xmx4G -Xms2G -jar paper-1.21.11-126.jar nogui
+        run: /usr/lib/jvm/java-21-openjdk-amd64/bin/java -Xmx4G -Xms2G -jar paper-1.21.11-126.jar nogui
