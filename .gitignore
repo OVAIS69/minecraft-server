@@ -1,0 +1,7 @@
+logs/
+cache/
+libraries/
+versions/
+*.log
+*.log.gz
+playit-linux*
